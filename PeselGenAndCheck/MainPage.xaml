@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="PeselGenAndCheck.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PeselGenAndCheck"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#004c4c">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock  Text="Witaj w programie " FontSize="40" Foreground="#b2d8d8" HorizontalAlignment="Center" Margin="5"/>
+            <TextBlock  Text="Generator i Checker Numeru Pesel" FontSize="40" Foreground="#b2d8d8" HorizontalAlignment="Center" Margin="5"/>
+        </StackPanel >
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5,225,5,5">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Aby wybrać generator kliknij przycisk generator:" FontSize="24" Foreground="#b2d8d8" Margin="0,5,5,5"/>
+                <Button x:Name="generator" Click="generator_Click" Background="#008080" FontSize="20" Content="generator" Margin="50,5,5,5" Width="125"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <TextBlock Text="Aby wybrać checker kliknij przycisk checker:" FontSize="24" Foreground="#b2d8d8" Margin="0,5,5,5"/>
+                <Button x:Name="checker" Click="checker_Click" Background="#008080" FontSize="20" Content="checker" Margin="97,5,5,5" Width="125"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>

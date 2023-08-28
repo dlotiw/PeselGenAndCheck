@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="PeselGenAndCheck.Checker"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PeselGenAndCheck"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#004c4c">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Pesel checker" FontSize="50" Foreground="#b2d8d8" HorizontalAlignment="Center"  Grid.Row="0"/>
+        <Button x:Name="cofaj" Content="←" FontSize="24" Foreground="#b2d8d8" Margin="5" Click="cofaj_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Podaj pesel:" FontSize="24" Foreground="#b2d8d8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox x:Name="pesel_dany" PlaceholderText="tu wpisz pesel" Margin="5" FontSize="24" Foreground="#b2d8d8" Width="220" MaxLength="11" TextChanged="pesel_TextChanged"/>
+            <Button x:Name="sprawdz" Content="SPRAWDŹ" HorizontalAlignment="Center" Margin="5" FontSize="24" Foreground="#b2d8d8" Click="sprawdz_Click"/>
+            <TextBlock x:Name="odp" HorizontalAlignment="Center" Margin="5,50,5,5" FontSize="50" Foreground="#b2d8d8"/>
+            <StackPanel>
+                <TextBlock x:Name="plec"  HorizontalAlignment="Center" Margin="5,5,5,5" FontSize="25" Foreground="#b2d8d8"/>
+                <TextBlock x:Name="urodziny"  HorizontalAlignment="Center" Margin="5,5,5,5" FontSize="25" Foreground="#b2d8d8"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

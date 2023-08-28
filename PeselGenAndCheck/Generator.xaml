@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="PeselGenAndCheck.Generator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PeselGenAndCheck"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  
+    
+    <Grid Background="#004c4c">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Generator" Foreground="#b2d8d8" Margin="5" FontSize="50" HorizontalAlignment="Center" Grid.Row="0"/>
+        <Button x:Name="cofaj" Content="←" FontSize="24" Foreground="#b2d8d8" Margin="5" Click="cofaj_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <StackPanel Grid.Row="1" Margin="5" HorizontalAlignment="Center">
+            <TextBlock Text="Aby wygenerować losowy pesel kliknij przycisk pod spodem" Foreground="#b2d8d8" Margin="5" FontSize="24"/>
+            <Button x:Name="generuj" Content="GENERUJ" Foreground="#b2d8d8" Margin="5,50,5,5" FontSize="35" Click="generuj_Click" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="pesel_gen" Foreground="#b2d8d8" Margin="5,50,5,5" FontSize="55" HorizontalAlignment="Center" Tapped="pesel_Tapped">
+                <FlyoutBase.AttachedFlyout>
+                <MenuFlyout x:Name="menu">
+                    <MenuFlyoutItem Text="Skopiowano" Foreground="#b2d8d8" Background="#006666" FontSize="15" BorderThickness="1"/>
+                </MenuFlyout>
+            </FlyoutBase.AttachedFlyout>
+            </TextBlock>
+            <TextBlock Text="Wybierz płeć pod spodem" Foreground="#b2d8d8" Margin="5" FontSize="24"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="W" Content="W" IsChecked="True"  Foreground="#b2d8d8" Margin="5" FontSize="24"/>
+                <RadioButton x:Name="M" Content="M" Foreground="#b2d8d8" Margin="5" FontSize="24"/>
+                <RadioButton x:Name="K" Content="K" Foreground="#b2d8d8" Margin="5" FontSize="24"/>
+            </StackPanel>
+            <TextBlock Text="Jeśli chcesz wybierz datę urodzenia" Foreground="#b2d8d8" Margin="5" FontSize="24"/>
+            <DatePicker x:Name="data_urodzenia" Header="Data urodzenia" Foreground="#b2d8d8" Margin="5" FontSize="24" SelectedDateChanged="data_urodzenia_SelectedDateChanged" Language="pl-PL" />
+        </StackPanel>
+        
+
+    </Grid>
+</Page>
